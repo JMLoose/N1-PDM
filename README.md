@@ -19,7 +19,8 @@ Flutter: v3.96.00
 
 Imagens do app:
 
-![image](https://github.com/user-attachments/assets/272a974f-c5c3-48ca-bbe5-fbf856b51f67)![image](https://github.com/user-attachments/assets/12f83a34-9273-4003-8f1a-9e9927faeb9b)![image](https://github.com/user-attachments/assets/f418a589-dacb-4cf2-8f94-f50c22dfa07f)
+![image](https://github.com/user-attachments/assets/272a974f-c5c3-48ca-bbe5-fbf856b51f67)![image](https://github.com/user-attachments/assets/12f83a34-9273-4003-8f1a-9e9927faeb9b)![image](https://github.com/user-attachments/assets/f418a589-dacb-4cf2-8f94-f50c22dfa07f)![image](https://github.com/user-attachments/assets/d40228ba-01f2-4c54-ba2a-cf53ee962129)
+
 
 
 
