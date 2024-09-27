@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'blumenau.dart';
 import 'guaramirim.dart';
 import 'joinville.dart';
@@ -29,17 +28,16 @@ class WeatherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF523961), // Cor de fundo semelhante à imagem
+      backgroundColor: Color(0xFF523961),
       appBar: AppBar(
         title: const Text('Jaraguá do Sul - SC',
             style: TextStyle(
               color: Colors.black,
             )),
-        centerTitle: true, // Centraliza o título horizontalmente
-        backgroundColor: Color(0xFFC3BBC9), // Cor de fundo do AppBar
+        centerTitle: true,
+        backgroundColor: Color(0xFFC3BBC9),
       ),
       body: SingleChildScrollView(
-        // Envolva o corpo com SingleChildScrollView
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -52,7 +50,7 @@ class WeatherScreen extends StatelessWidget {
             const SizedBox(height: 16),
             _buildMoreInfoButton(),
             const SizedBox(height: 16),
-            _buildOtherCities(context), // Passando o context para navegação
+            _buildOtherCities(context),
           ],
         ),
       ),
@@ -66,8 +64,8 @@ Widget _buildCurrentWeather() {
       borderRadius: BorderRadius.circular(10),
       image: DecorationImage(
         image: AssetImage(
-            'lib/assets/images/thunderstorm.jpg'), // Caminho da imagem
-        fit: BoxFit.cover, // Ajusta a imagem para cobrir todo o espaço
+            'lib/assets/images/thunderstorm.jpg'),
+        fit: BoxFit.cover,
       ),
     ),
     child: Padding(
@@ -99,9 +97,6 @@ Widget _buildHourlyForecast() {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-
-
-
         Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -122,9 +117,6 @@ Widget _buildHourlyForecast() {
           ),
           padding: EdgeInsets.all(8.0),
         ),
-
-
-
         Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -145,9 +137,7 @@ Widget _buildHourlyForecast() {
           ),
           padding: EdgeInsets.all(8.0),
         ),
-
-
-Container(
+        Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -167,8 +157,6 @@ Container(
           ),
           padding: EdgeInsets.all(8.0),
         ),
-
-
         Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -189,9 +177,7 @@ Container(
           ),
           padding: EdgeInsets.all(8.0),
         ),
-
-
-Container(
+        Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -211,8 +197,6 @@ Container(
           ),
           padding: EdgeInsets.all(8.0),
         ),
-
-
       ],
     ),
   );
@@ -221,10 +205,10 @@ Container(
 Widget _build3DayForecast() {
   return Container(
     decoration: BoxDecoration(
-      color: Color(0xff3B234A), // Cor de fundo
-      borderRadius: BorderRadius.circular(10), // Bordas arredondadas
+      color: Color(0xff3B234A),
+      borderRadius: BorderRadius.circular(10),
     ),
-    padding: EdgeInsets.all(10), // Padding opcional
+    padding: EdgeInsets.all(10),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: const [
@@ -253,14 +237,12 @@ Widget _buildOtherCities(BuildContext context) {
     children: [
       _buildCityWeatherButton(context, 'Guaramirim - SC', '30°/28°',
           Icons.wb_sunny, 'GuaramirimScreen'),
-      SizedBox(height: 10), // Adiciona um espaço de 10 pixels
-
+      SizedBox(height: 10),
       _buildCityWeatherButton(
           context, 'Blumenau - SC', '23°/19°', Icons.cloud, 'BlumenauScreen'),
-      SizedBox(height: 10), // Adiciona um espaço de 10 pixels
-
+      SizedBox(height: 10),
       _buildCityWeatherButton(context, 'Joinville - SC', '-5°/0°',
-          Icons.wb_sunny, 'JoinvilleScreen'),
+          Icons.ac_unit, 'JoinvilleScreen'),
     ],
   );
 }
@@ -270,7 +252,7 @@ Widget _buildCityWeatherButton(BuildContext context, String city, String temp,
   return ElevatedButton(
     style: ElevatedButton.styleFrom(
       padding: const EdgeInsets.all(16.0),
-      backgroundColor: Color(0xFFC3BBC9), // Cor de fundo do botão
+      backgroundColor: Color(0xFFC3BBC9),
     ),
     onPressed: () {
       Navigator.pushNamed(context, routeName);
