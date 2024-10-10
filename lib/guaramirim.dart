@@ -4,17 +4,17 @@ class GuaramirimScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF523961), // Cor de fundo semelhante à imagem
+      backgroundColor: Color(0xFF523961),
       appBar: AppBar(
         title: const Text('Guaramirim - SC',
             style: TextStyle(
               color: Colors.black,
             )),
-        centerTitle: true, // Centraliza o título horizontalmente
-        backgroundColor: Color(0xFFC3BBC9), // Cor de fundo do AppBar
+        centerTitle: true,
+        backgroundColor: Color(0xFFC3BBC9),
       ),
       body: SingleChildScrollView(
-        // Envolva o corpo com SingleChildScrollView
+        
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
